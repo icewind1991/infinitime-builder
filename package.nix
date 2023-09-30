@@ -9,7 +9,8 @@
   fetchzip,
   patch,
   git,
-  fetchgit,
+  fetchFromGitHub,
+  fetchpatch,
 }: let
   infinitime-nrf5-sdk = nrf5-sdk.overrideAttrs (old: {
     version = "15.3.0";
@@ -21,13 +22,17 @@
 in stdenv.mkDerivation rec {
   name = "infinitime";
 
-  src = fetchgit {
-    url = "https://github.com/InfiniTimeOrg/InfiniTime";
+  src = fetchFromGitHub {
+    owner = "InfiniTimeOrg";
+    repo = "InfiniTime";
     rev = "1.13.0";
-    hash = "sha256-d2zW1JxoQ2j1Yezp3AeDDY7KObyqZ3N8JO4WCbV02sc=";
-    deepClone = true;
+    hash = "sha256-aY1G60Rb+D7iAWsqn1j4SkL+mpXT34otWvS29UFidzM=";
     fetchSubmodules = true;
   };
+
+  patches = [
+    # put your patches here
+  ];
 
   nativeBuildInputs = [
     cmake
