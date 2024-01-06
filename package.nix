@@ -25,8 +25,8 @@ in stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "InfiniTimeOrg";
     repo = "InfiniTime";
-    rev = "1.13.0";
-    hash = "sha256-aY1G60Rb+D7iAWsqn1j4SkL+mpXT34otWvS29UFidzM=";
+    rev = "1.14.0";
+    hash = "sha256-NWqlhQonBhWlSyI4IHLXrc8+FhUKzSo4EvLCLRFgFf0=";
     fetchSubmodules = true;
   };
 
@@ -44,6 +44,7 @@ in stdenv.mkDerivation rec {
     python3.pkgs.cryptography
     python3.pkgs.intelhex
     python3.pkgs.adafruit-nrfutil
+    python3.pkgs.pillow
     patch
     git
   ];
