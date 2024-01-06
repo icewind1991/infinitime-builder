@@ -10,10 +10,13 @@
     utils,
   }:
   utils.lib.eachDefaultSystem (system: let
+      inherit (nixpkgs.lib) getName;
+      inherit (builtins) elem;
       pkgs = (import nixpkgs) {
         inherit system;
-        # nrf5-sdk is unfree
-        config.allowUnfree = true;
+        config.allowUnfreePredicate = pkg: elem (getName pkg) [
+          "nrf5-sdk"
+        ];
       };
     in rec {
       packages = {
