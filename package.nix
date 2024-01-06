@@ -11,6 +11,7 @@
   git,
   fetchFromGitHub,
   fetchpatch,
+  adafruit-nrfutil,
 }: let
   infinitime-nrf5-sdk = nrf5-sdk.overrideAttrs (old: {
     version = "15.3.0";
@@ -43,8 +44,8 @@ in stdenv.mkDerivation rec {
     python3.pkgs.click
     python3.pkgs.cryptography
     python3.pkgs.intelhex
-    python3.pkgs.adafruit-nrfutil
     python3.pkgs.pillow
+    adafruit-nrfutil
     patch
     git
   ];
