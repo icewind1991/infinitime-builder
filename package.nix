@@ -33,19 +33,9 @@ in stdenv.mkDerivation rec {
 
   patches = [
     (fetchpatch {
-      name = "double-click-settings.patch";
-      url = "https://github.com/InfiniTimeOrg/InfiniTime/commit/d395f6f0857f082ab3e7fc66cb591b12bbd9cd65.patch";
-      sha256 = "sha256-2Jng8JDTU7Zd42qD25CQNeF9dQRSLNwWq9IL+ik0ok0=";
-    })
-    (fetchpatch {
-      name = "casio-weather.patch";
-      url = "https://github.com/InfiniTimeOrg/InfiniTime/commit/0206a12ffaecb4d92a3a422e43f4e758d0838f3b.patch";
-      sha256 = "sha256-FqyIAgS77z/bO1dcvsmtSK5z/bTRY45S+CaM+PewfvQ=";
-    })
-    (fetchpatch {
-      name = "weather-service-improvements.patch";
-      url = "https://github.com/InfiniTimeOrg/InfiniTime/commit/315d679c48503b5f03bdb1b2217e6d64102b2e95.patch";
-      sha256 = "sha256-ps9iR0/uiapNG5WK38FU1Pa/2YmZB6KGQQC4M5pkuNA=";
+      name = "charging-battery.patch";
+      url = "https://github.com/InfiniTimeOrg/InfiniTime/commit/b04558c3.patch";
+      sha256 = "sha256-VXCq8CM14zT7vji2x8rb9ZTji3yVc6fNgF/PfdcMLDM=";
     })
   ];
 
