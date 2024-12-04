@@ -20,13 +20,14 @@
     };
   });
 in stdenv.mkDerivation rec {
-  name = "infinitime";
+  pname = "infinitime";
+  version = "1.15.0";
 
   src = fetchFromGitHub {
     owner = "InfiniTimeOrg";
     repo = "InfiniTime";
-    rev = "1.14.0";
-    hash = "sha256-NWqlhQonBhWlSyI4IHLXrc8+FhUKzSo4EvLCLRFgFf0=";
+    rev = version;
+    hash = "sha256-FLXMaXqn+SOPC+ft7Ee3Gf7mUnb76dcZcJrXbUDOnZ0=";
     fetchSubmodules = true;
   };
 
