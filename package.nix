@@ -1,7 +1,6 @@
 {
   stdenv,
   cmake,
-  lv_img_conv,
   nodePackages,
   python3,
   gcc-arm-embedded-10,
@@ -37,7 +36,6 @@ in stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
-    lv_img_conv
     nodePackages.lv_font_conv
     python3
     python3.pkgs.cbor
